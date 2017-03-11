@@ -79,6 +79,7 @@ public class GirlDataAdapter extends RecyclerView.Adapter<GirlDataAdapter.MyHold
 
     }
 
+    //点击事件监听
     private OnGirlItemClickListener mListener;
     public void setOnItemClickListener(OnGirlItemClickListener listener){
         mListener = listener;

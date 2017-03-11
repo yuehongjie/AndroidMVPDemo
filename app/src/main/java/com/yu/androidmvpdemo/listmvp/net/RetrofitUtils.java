@@ -1,6 +1,6 @@
 package com.yu.androidmvpdemo.listmvp.net;
 
-import common.GlobalConfig;
+import com.yu.androidmvpdemo.common.GlobalConfig;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
