@@ -1,5 +1,6 @@
 package com.yu.androidmvpdemo.listmvp.presenter;
 
+import android.app.Activity;
 import android.os.Handler;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -28,6 +29,7 @@ public class GirlPresenter {
 
     private IMVPView mView;
     private RecyclerView mRecyclerView;
+    private Activity mActivity;
 
     private final GirlModel mModel;
 
@@ -41,6 +43,7 @@ public class GirlPresenter {
     public GirlPresenter(IMVPView view) {
         this.mView = view;
         this.mRecyclerView = mView.getRecyclerView();
+        mActivity = mView.getActivity();
         mModel = new GirlModel();
         mHandler = new Handler();
     }
@@ -107,7 +110,7 @@ public class GirlPresenter {
                         mGirlList = new ArrayList<>();
                         mGirlList.addAll(girlsDatas.results);
 
-                        mRecyclerView.setLayoutManager(new LinearLayoutManager(mRecyclerView.getContext()));
+                        mRecyclerView.setLayoutManager(new LinearLayoutManager(mActivity.getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
                         mAdapter = new GirlDataAdapter(mGirlList);
                         initAdapterListener();
                         mRecyclerView.setAdapter(mAdapter);

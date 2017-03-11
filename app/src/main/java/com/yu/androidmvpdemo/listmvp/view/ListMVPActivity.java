@@ -1,5 +1,7 @@
 package com.yu.androidmvpdemo.listmvp.view;
 
+import android.app.Activity;
+import android.content.Context;
 import android.databinding.adapters.AbsListViewBindingAdapter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -75,5 +77,10 @@ public class ListMVPActivity extends AppCompatActivity implements IMVPView{
     @Override
     public RecyclerView getRecyclerView() {
         return rlContent;
+    }
+
+    @Override
+    public Activity getActivity() {
+        return this;
     }
 }

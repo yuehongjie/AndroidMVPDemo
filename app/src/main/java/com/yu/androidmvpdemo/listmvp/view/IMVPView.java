@@ -1,5 +1,7 @@
 package com.yu.androidmvpdemo.listmvp.view;
 
+import android.app.Activity;
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 
 /**
@@ -14,4 +16,6 @@ public interface IMVPView {
 
     //获取 RecyclerView 对象
     RecyclerView getRecyclerView();
+
+    Activity getActivity();
 }
