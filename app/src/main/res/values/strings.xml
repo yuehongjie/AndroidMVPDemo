@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AndroidMVPDemo</string>
+    <string name="text_use_data_binding">DataBinding 使用</string>
+    <string name="text_input">输入内容</string>
+    <string name="text_output">实时显示</string>
+    <string name="text_use_mvp_list">使用 MVP 填充列表信息</string>
+</resources>
